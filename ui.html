@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ui</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+      }
+      body {
+        padding: 10px;
+      }
+
+      h3 {
+        text-transform: capitalize;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        border: 3px solid black;
+        width: 800px;
+        height: 100%;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 30px 0;
+      }
+      #nav-left-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      #black {
+        background: black;
+        padding: 15px 15px;
+        display: inline-block;
+        border-radius: 3px;
+      }
+      .heading-area {
+        margin: 80px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .heading-area span {
+        color: rgba(0, 0, 0, 0.556);
+      }
+      .link-div {
+        display: flex;
+        gap: 10px;
+      }
+      #details {
+        width: 100%;
+        display: flex;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+      }
+
+      .project-child {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-child span {
+        padding: 8px 15px;
+      }
+      .work {
+        padding: 8px 15px;
+      }
+      .work > * {
+        padding: 10px 0;
+      }
+      .project-child > span:nth-child(even) {
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+      }
+
+      .project-child span,
+      h3 {
+        padding: 10px 15px;
+        padding-right: 0;
+      }
+
+      .detail-anchor {
+        color: rgb(0, 119, 255);
+        font-size: 13px;
+      }
+
+      .study {
+        padding: 10px;
+      }
+
+      .study * {
+        border: none !important;
+      }
+      .study > * {
+        padding: 5px 0;
+      }
+      ul {
+        line-height: 20px;
+        list-style: "- " inside;
+      }
+      footer {
+        padding: 20px 20px 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .footer-divs {
+        display: flex;
+        gap: 25px;
+        justify-content: space-between;
+      }
+      .footer-child-div > p {
+        margin-bottom: 20px;
+      }
+      .footer-child-div {
+        width: 300px;
+        border: 2px solid black;
+        border-radius: 30px;
+        padding: 20px;
+        margin: 20px 0 0 0;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+      }
+      .footer-child-div span {
+        color: rgba(0, 0, 0, 0.508);
+      }
+      #copy-right {
+        margin: 100px 0 30px;
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div id="nav-left-box">
+          <div id="black"></div>
+          your name
+        </div>
+
+        <div class="link-div">
+          <a href="#">Home</a>
+          <a href="#">Projects</a>
+          <a href="#">Articles</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+
+      <header>
+        <div class="heading-area">
+          <h1>Frontend Developer</h1>
+          <span>html only with proper layout, with some styling</span>
+        </div>
+
+        <div id="details">
+          <div
+            class="child-details"
+            style="width: 484px; text-transform: capitalize"
+          >
+            <h3>Projects</h3>
+            <div class="project-child">
+              <span>HTML only portfolio</span>
+              <span>calculator</span>
+              <span>quiz app</span>
+              <span>countdown timer</span>
+              <span>product upcoming page</span>
+            </div>
+          </div>
+          <div
+            class="child-details"
+            style="border-left: 2px solid black; border-right: 2px solid black"
+          >
+            <div
+              class="project-top work"
+              style="border-bottom: 2px solid black"
+            >
+              <h3>Work experience</h3>
+              <span>roadmp.sh</span>
+              <p>solved all the frontend projects</p>
+              <a class="detail-anchor" href="#">Visit my profile</a>
+            </div>
+
+            <div class="project-bottom work">
+              <h3>roadmp.sh</h3>
+              <p>
+                Contrubuted to 50 opensource projects.made my own projects with
+                200 GitHub stars
+              </p>
+              <a class="detail-anchor" href="#">Visit my profile</a>
+            </div>
+          </div>
+
+          <div class="child-details study">
+            <h3>Eduction</h3>
+            <div class="project-child">
+              <p>
+                Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized
+                30 sessions
+              </p>
+
+              <span>courses i took:</span>
+              <ul>
+                <li>Object oriented programming</li>
+                <li>data structures and algorithms</li>
+                <li>web engineering</li>
+                <li>artifical intelligence</li>
+                <li>human computer interaction</li>
+                <li>computer graphics</li>
+                <li>database management systems</li>
+                <li>distributed database systems</li>
+                <li>discreet mathematics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <footer>
+        <h3>Reviews form my teachers</h3>
+
+        <div class="footer-divs">
+          <div class="footer-child-div">
+            <p>
+              Prabhat was a brillant student; always stood out with his
+              assignments.
+            </p>
+            <span>Prabhat kumar</span>
+            <span>Assistant Professor</span>
+          </div>
+
+          <div class="footer-child-div">
+            <p>
+              Prabhat was a brillant student; always stood out with his
+              assignments.
+            </p>
+            <span>Prabhat kumar</span>
+            <span>Assistant Professor</span>
+          </div>
+
+          <div class="footer-child-div">
+            <p>
+              Prabhat was a brillant student; always stood out with his
+              assignments.
+            </p>
+            <span>Prabhat kumar</span>
+            <span>Assistant Professor</span>
+          </div>
+        </div>
+        <span id="copy-right">&copy all rights reserved 2025</span>
+      </footer>
+    </main>
+  </body>
+</html>

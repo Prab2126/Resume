@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Changelog</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+      }
+      :root {
+        --ol-padding: 10px 0;
+      }
+      body {
+        padding: 10px;
+      }
+      main {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 700px;
+        border: 2px solid black;
+        border-radius: 15px;
+        padding: 30px;
+        align-items: center;
+      }
+      ol {
+        list-style: "";
+      }
+      h1 {
+        text-align: center;
+        font-weight: normal;
+        margin: 30px 0;
+      }
+      #content {
+        display: flex;
+        line-height: 60px;
+        letter-spacing: 1px;
+        margin: 40px 0;
+      }
+      .left,
+      .right {
+        padding: 30px 0;
+      }
+      .left {
+        border-right: 3px solid black;
+        padding-right: 20px !important;
+        text-align: right;
+        color: rgba(0, 0, 0, 0.544);
+      }
+      .right {
+        padding-left: 20px;
+      }
+      .right > ol {
+        list-style: "⚫ ";
+        position: relative;
+        left: -5px;
+      }
+      span {
+        color: rgba(0, 0, 0, 0.558);
+      }
+      button {
+        padding: 10px 20px;
+        background: rgb(28, 28, 28);
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Changelog</h1>
+        <span>Here's everything we have shipped in the past few days</span>
+      </header>
+
+      <div id="content">
+        <div class="left">
+          <ol>
+            <li>September 3, 2024</li>
+            <li>August 28, 2024</li>
+            <li>August 25, 2024</li>
+            <li>August 22, 2024</li>
+            <li>August 15, 2024</li>
+            <li>August 10, 2024</li>
+            <li>August 1, 2024</li>
+          </ol>
+        </div>
+
+        <div class="right">
+          <ol>
+            <li>Announcing Projects on Frontend Roadmap</li>
+            <li>Build your learning habits with learning streaks</li>
+            <li>Git and GitHub Roadmap</li>
+            <li>Submit your project solution and get feedback</li>
+            <li>Backend Project Ideas</li>
+            <li>Redis roadmap/li></li>
+            <li>Changelog page to help you stay in the loop</li>
+          </ol>
+        </div>
+      </div>
+      <button>Visit complete changelog</button>
+    </main>
+  </body>
+</html>

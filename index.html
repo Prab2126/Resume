@@ -2,29 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prabhat resume</title>
     <style>
+      :root {
+        --text-blur: 12px;
+        --border-color: rgb(70 0 255);
+      }
+      * ::selection {
+        background: black;
+        color: palevioletred;
+      }
       * {
         padding: 0;
         margin: 0;
+        color: white;
         box-sizing: border-box;
+        font-family: "Kdam Thmor Pro", sans-serif;
+        font-weight: 400;
+        font-style: normal;
       }
+
       body {
         display: flex;
+        background: black;
         justify-content: center;
         padding: 10px;
       }
       a {
-        color: #744a00;
+        color: #ff0303;
         font-weight: bold;
+        font-family: sans-serif;
         text-decoration: none;
-        text-shadow: 0 0 12px #ff0303;
+        text-shadow: 0 0 var(--text-blur) #ff0303;
       }
       .contaner {
-        border: 4px solid black;
+        border: 4px groove var(--border-color);
         padding: 50px;
         font-family: sans-serif;
+        box-shadow: inset 0 0 72px -31px var(--border-color);
         width: 600px;
         text-transform: capitalize;
       }
@@ -35,10 +57,24 @@
       }
       .h4 {
         color: rgb(0, 188, 0);
+        text-shadow: 0 0 var(--text-blur) rgb(0, 188, 0);
         margin: 15px 0;
+        font-family: style;
+      }
+
+      @font-face {
+        font-family: style;
+        src: url("fonts/GORINE\ FLUMS.otf");
       }
       .h3 {
         color: rgb(0, 119, 255);
+        font-family: h3style;
+        letter-spacing: 2px;
+        text-shadow: 0 0 var(--text-blur) rgb(0, 119, 255);
+      }
+      @font-face {
+        font-family: h3style;
+        src: url("fonts/super_squad/Super\ Squad.otf");
       }
       span,
       li {
@@ -56,30 +92,30 @@
       #top-heading {
         padding: 15px 0 0 0;
 
-        border-top: 3px solid black;
+        border-top: 3px solid var(--border-color);
+      }
+      #projects-link li {
+        list-style: "🔗 " inside;
       }
     </style>
   </head>
   <body>
     <div class="contaner">
-      <h2 id="top-heading">your name</h2>
+      <h2 id="top-heading">Prabhat</h2>
 
       <div class="content">
         <div class="details">
           <h4 class="h4">junior frontend developer</h4>
           <span>123 your street</span>
-          <span>your city, ST 12345</span>
-          <span>(123) 456-789-</span>
-          <span>no_reply@example.com</span>
+          <span>Patna</span>
+          <span>7061632796</span>
+          <span>highkumar0@gmail.com</span>
         </div>
 
         <div class="details">
           <h4 class="h4">skills</h4>
-          <span
-            >html,css,javascript accessiblity,figma to design,responsive web
-            design</span
-          >
-          <span>technical writing, presentation</span>
+          <span>html,css,javascript</span>
+          <span>git,git hub,tailwind css</span>
         </div>
 
         <div class="details">
@@ -93,10 +129,8 @@
           <h4 class="h4">Projects</h4>
           <h3 class="h3">My projects</h3>
           <span>Uploaded in GitHub</span>
-          <ul>
+          <ul id="projects-link">
             <li><a href="pages/ui.html">UI type of small project</a></li>
-            <li>list of achievements</li>
-            <li>list of achievements</li>
           </ul>
 
           <span>skills:list of skills used or gained at this company</span>

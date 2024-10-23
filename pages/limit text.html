@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>limit text</title>
+    <script src="js/script.js" defer></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        width: 500px;
+        margin-top: 20px;
+        height: 300px;
+        resize: none;
+        border: 2px solid black;
+        outline: none;
+        padding: 15px;
+        border-radius: 30px;
+        font-size: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      h1 {
+        font-family: sans-serif;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        overflow: auto;
+        width: 100%;
+        justify-content: center;
+        height: 100vh;
+      }
+      .span-contaner {
+        color: rgb(22, 185, 0);
+        font-size: 20px;
+        margin: 10px 0 0 0;
+      }
+      .change-js > * {
+        border-color: red;
+        color: red;
+      }
+      .change-js > h1 {
+        color: black;
+      }
+      main {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Write your message</h1>
+      <textarea placeholder="Typing"></textarea>
+      <div class="span-contaner">
+        <span id="change-num">0</span><span id="fixed-num">/200</span>
+      </div>
+    </main>
+  </body>
+</html>

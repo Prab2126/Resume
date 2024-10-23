@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Img grid</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      main {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        padding: 17px;
+        overflow: auto;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+      main div {
+        background-position: center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+      }
+      main div:nth-child(1) {
+        background: url("img/pexels-arts-1496373.jpg");
+        height: 450px;
+        width: 442px;
+      }
+      main div:nth-child(2) {
+        background: url("img/pexels-frederthal-3571576.jpg");
+      }
+      main div:nth-child(3) {
+        background: url("img/pexels-malek-dridi-231937-1082663.jpg");
+      }
+
+      main div:nth-child(4) {
+        height: 577px;
+        background: url("img/pexels-ollivves-1047051.jpg");
+      }
+
+      main div:nth-child(5) {
+        background: url("img/pexels-ollivves-1433052.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </main>
+  </body>
+</html>

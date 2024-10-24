@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/accordions.js" defer></script>
+    <title>Accordions</title>
+    <style>
+      * {
+        padding: 0;
+        font-family: sans-serif;
+        font-size: 20px;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+      }
+
+      main {
+        border: 2px solid black;
+        border-radius: var(--same-border-radius);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        overflow: auto;
+      }
+      :root {
+        --same-border-radius: 20px;
+      }
+      .contaner {
+        width: 614px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+      }
+      .contaner p {
+        margin: 10px 0 0 0;
+        padding: 20px;
+        display: none;
+        border-radius: var(--same-border-radius);
+        line-height: 25px;
+        border: 2px solid black;
+      }
+      .contaner span {
+        border-radius: var(--same-border-radius);
+        background: black;
+        color: white;
+        padding: 20px 20px;
+        cursor: pointer;
+        display: block;
+      }
+      #child-main {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+      }
+      h1 {
+        font-size: 28px;
+      }
+
+      .js-toggle {
+        display: block !important;
+      }
+      .contaner-span {
+        display: flex !important;
+        justify-content: space-between;
+      }
+      .contaner-span > * {
+        display: inline-block !important;
+        padding: 0 !important;
+      }
+      i {
+        rotate: 90deg;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="child-main">
+        <h1>Frequently Asked Questions</h1>
+        <p>Here are some of the frequently asked questions</p>
+        <div class="contaner">
+          <div>
+            <span class="contaner-span"
+              ><span>what is roadmap.sh?</span> <i>></i></span
+            >
+            <p class="content-p">
+              roadmap.sh is a community effort to create learning paths, guides,
+              project ideas and other similar content to help developers grow in
+              their careers
+            </p>
+          </div>
+
+          <div>
+            <span class="contaner-span"
+              ><span>What are the plans for roadmap.sh?</span> <i>></i></span
+            >
+            <p class="content-p">
+              roadmap.sh is a community effort to create learning paths, guides,
+              project ideas and other similar content to help developers grow in
+              their careers
+            </p>
+          </div>
+
+          <div>
+            <span class="contaner-span"
+              ><span>How is roadmap.sh built?</span> <i>></i></span
+            >
+            <p class="content-p">
+              roadmap.sh is a community effort to create learning paths, guides,
+              project ideas and other similar content to help developers grow in
+              their careers
+            </p>
+          </div>
+
+          <div>
+            <span class="contaner-span"
+              ><span>Can I use roadmap.sh in my team?</span> <i>></i></span
+            >
+            <p class="content-p">
+              roadmap.sh is a community effort to create learning paths, guides,
+              project ideas and other similar content to help developers grow in
+              their careers
+            </p>
+          </div>
+
+          <div>
+            <span class="contaner-span"
+              ><span>How can I create custom roadmaps?</span> <i>></i></span
+            >
+            <p class="content-p">
+              roadmap.sh is a community effort to create learning paths, guides,
+              project ideas and other similar content to help developers grow in
+              their careers
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

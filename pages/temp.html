@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/temperature.js" defer></script>
+    <title>Temperature</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      main {
+        display: flex;
+        gap: 30px;
+        border-radius: 20px;
+        flex-direction: column;
+        width: 100%;
+        border: 2px solid black;
+        margin: 10px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 34px;
+      }
+      input,
+      select,
+      button {
+        padding: 15px;
+        border: 2px solid black;
+        border-radius: 20px;
+        font-size: 18px;
+        background: white;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        outline: none;
+      }
+      input {
+        width: 100px;
+      }
+      button {
+        color: white;
+        cursor: pointer;
+        background: black;
+        cursor: not-allowed;
+      }
+      main span:last-child {
+        color: rgb(18, 194, 18);
+        display: none;
+      }
+      main > div {
+        display: flex;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Temperature</h1>
+      <span>Enter the temperatue, select units and submit</span>
+      <div>
+        <input type="text" id="text" placeholder="0" />
+
+        <select id="form">
+          <option selected disabled>From</option>
+
+          <option value="Fahrenheit">Fahrenheit</option>
+          <option value="Celsius">Celsius</option>
+          <option value="Kelvin">Kelvin</option>
+        </select>
+
+        <select id="to">
+          <option selected disabled>to</option>
+          <option value="Fahrenheit">Fahrenheit</option>
+          <option value="Celsius">Celsius</option>
+          <option value="Kelvin">Kelvin</option>
+        </select>
+
+        <button disabled="disabled">Convert</button>
+      </div>
+      <span
+        ><strong class="fnum"></strong> <span></span> is
+        <strong class="lnum"></strong> <span></span
+      ></span>
+    </main>
+  </body>
+</html>

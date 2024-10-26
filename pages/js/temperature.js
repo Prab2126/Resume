@@ -38,17 +38,24 @@ function FetAddCalculated() {
 }
 function btnAllow() {
   if (formSelection && toSelection && inputNumValue) {
-    button.style.cursor = "pointer";
-    button.disabled = false;
-    button.addEventListener("click", (e) => {
-      calNumber.parentElement.style.display = "block";
-      toValue.style.display = "inline-block";
-      let calculatedNum = final(parseFloat(inputNumValue));
-      calNumber.innerHTML = calculatedNum.toFixed(2);
-      inputNumber.innerHTML = inputNumValue;
-      formValue.innerHTML = formSelection;
-      toValue.innerHTML = toSelection;
-    });
+    let calculatedNum = final(+inputNumValue);
+
+    if (typeof calculatedNum == "NaN") {
+      button.style.cursor = " not-allowed";
+      button.disabled = true;
+    }
+    if (typeof calculatedNum != "NaN") {
+      button.style.cursor = "pointer";
+      button.disabled = false;
+      button.addEventListener("click", (e) => {
+        calNumber.parentElement.style.display = "block";
+        toValue.style.display = "inline-block";
+        calNumber.innerHTML = calculatedNum.toFixed(2);
+        inputNumber.innerHTML = inputNumValue;
+        formValue.innerHTML = formSelection;
+        toValue.innerHTML = toSelection;
+      });
+    }
   }
 
   if (formSelection === toSelection) {

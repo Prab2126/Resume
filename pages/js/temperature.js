@@ -37,34 +37,31 @@ function FetAddCalculated() {
   }
 }
 function btnAllow() {
-  if (formSelection && toSelection && inputNumValue) {
-    let calculatedNum = final(+inputNumValue);
-
-    if (calculatedNum === NaN) {
-      button.style.cursor = "pointer";
-      button.disabled = false;
-      button.addEventListener("click", () => {
-        calNumber.parentElement.style.display = "block";
-        toValue.style.display = "inline-block";
-        calNumber.innerHTML = calculatedNum.toFixed(2);
-        inputNumber.innerHTML = inputNumValue;
-        formValue.innerHTML = formSelection;
-        toValue.innerHTML = toSelection;
-      });
-    }
-    if (calculatedNum != NaN) {
-      button.style.cursor = " not-allowed";
-      button.disabled = true;
-    }
-  }
-
-  if (formSelection === toSelection) {
+  if (
+    formSelection &&
+    toSelection &&
+    toSelection != formSelection &&
+    inputNumValue
+  ) {
+    button.style.cursor = "pointer";
+    button.disabled = false;
+  } else {
     button.style.cursor = " not-allowed";
     button.disabled = true;
   }
+
+  button.addEventListener("click", () => {
+    let calculatedNum = final(inputNumValue);
+    calNumber.parentElement.style.display = "block";
+    toValue.style.display = "inline-block";
+    calNumber.innerHTML = calculatedNum.toFixed(2);
+    inputNumber.innerHTML = inputNumValue;
+    formValue.innerHTML = formSelection;
+    toValue.innerHTML = toSelection;
+  });
 }
 input.addEventListener("input", (e) => {
-  inputNumValue = e.target.value;
+  inputNumValue = Number(e.target.value);
   FetAddCalculated();
   btnAllow();
 });

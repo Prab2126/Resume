@@ -40,14 +40,10 @@ function btnAllow() {
   if (formSelection && toSelection && inputNumValue) {
     let calculatedNum = final(+inputNumValue);
 
-    if (typeof calculatedNum == "NaN") {
-      button.style.cursor = " not-allowed";
-      button.disabled = true;
-    }
-    if (typeof calculatedNum != "NaN") {
+    if (calculatedNum === NaN) {
       button.style.cursor = "pointer";
       button.disabled = false;
-      button.addEventListener("click", (e) => {
+      button.addEventListener("click", () => {
         calNumber.parentElement.style.display = "block";
         toValue.style.display = "inline-block";
         calNumber.innerHTML = calculatedNum.toFixed(2);
@@ -55,6 +51,10 @@ function btnAllow() {
         formValue.innerHTML = formSelection;
         toValue.innerHTML = toSelection;
       });
+    }
+    if (calculatedNum != NaN) {
+      button.style.cursor = " not-allowed";
+      button.disabled = true;
     }
   }
 

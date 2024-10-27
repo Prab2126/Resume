@@ -50,7 +50,7 @@
         font-size: 20px;
         width: 100%;
       }
-      button[disabled] {
+      button {
         background: black;
         font-size: 25px;
         cursor: not-allowed;
@@ -59,7 +59,19 @@
       }
       #task {
         display: flex;
+        max-width: 507px;
+        max-height: 240px;
+        overflow-y: auto;
+        overflow-x: hidden;
         flex-direction: column;
+      }
+      #task::-webkit-scrollbar {
+        width: 5px;
+      }
+      #task::-webkit-scrollbar-thumb {
+        width: 100%;
+        border-radius: 100%;
+        background: #ff007e;
       }
       #task > * {
         border-bottom: 1px solid rgba(128, 128, 128, 0.308);
@@ -68,9 +80,11 @@
         gap: 10px;
         font-size: 23px;
       }
-      input {
-        width: 21px;
-        accent-color: #707070;
+      .checkbox {
+        border: 1px solid black;
+        cursor: pointer;
+        border-radius: 2px;
+        padding: 11px;
       }
       svg {
         width: 24px;
@@ -86,6 +100,13 @@
       svg:hover {
         fill: rgb(255, 255, 255);
       }
+      .js-pr-text-style {
+        background: gray;
+      }
+      .js-text-style {
+        color: gray;
+        text-decoration: line-through 1px solid gray;
+      }
     </style>
   </head>
   <body>
@@ -94,26 +115,11 @@
       <div class="input-field">
         <input
           type="text"
-          placeholder="Start writing and press enter to create task"
+          placeholder="Start writing and Enter button to create task"
         />
         <button disabled>&crarr;</button>
       </div>
-      <div id="task">
-        <div class="same-task-css">
-          <input type="checkbox" id="box" />
-          <span></span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            id="recycle-bin"
-          >
-            <circle cx="12" cy="13" r="17" fill="white" />
-            <path
-              d="M20,6H16V5a3,3,0,0,0-3-3H11A3,3,0,0,0,8,5V6H4A1,1,0,0,0,4,8H5V19a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V8h1a1,1,0,0,0,0-2ZM10,5a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1V6H10Zm7,14a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V8H17Z"
-            ></path>
-          </svg>
-        </div>
-      </div>
+      <div id="task"></div>
     </main>
   </body>
 </html>

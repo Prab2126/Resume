@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <script src="js/todo.js" defer></script>
+    <style>
+      * {
+        padding: 0;
+        font-family: sans-serif;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        padding: 10px;
+        height: 100vh;
+      }
+      main {
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border: 2px solid black;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 20px;
+      }
+      #task {
+        display: flex;
+        flex-direction: column;
+      }
+      .input-field {
+        padding: 4px;
+        display: flex;
+        gap: 10px;
+        border-radius: 10px;
+        width: 560px;
+        border: 2px solid black;
+      }
+      input,
+      button {
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        background: none;
+      }
+      input[type="text"] {
+        font-size: 20px;
+        width: 100%;
+      }
+      button[disabled] {
+        background: black;
+        font-size: 25px;
+        cursor: not-allowed;
+        border-radius: 10px;
+        color: white;
+      }
+      #task {
+        display: flex;
+        flex-direction: column;
+      }
+      #task > * {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.308);
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        font-size: 23px;
+      }
+      input {
+        width: 21px;
+        accent-color: #707070;
+      }
+      svg {
+        width: 24px;
+        border-radius: 100px;
+        margin: 0 0 0 10px;
+        cursor: pointer;
+        overflow: visible;
+        fill: #ff007e;
+      }
+      svg:hover circle {
+        fill: #ff007e;
+      }
+      svg:hover {
+        fill: rgb(255, 255, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Task Tracker</h1>
+      <div class="input-field">
+        <input
+          type="text"
+          placeholder="Start writing and press enter to create task"
+        />
+        <button disabled>&crarr;</button>
+      </div>
+      <div id="task">
+        <div class="same-task-css">
+          <input type="checkbox" id="box" />
+          <span></span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            id="recycle-bin"
+          >
+            <circle cx="12" cy="13" r="17" fill="white" />
+            <path
+              d="M20,6H16V5a3,3,0,0,0-3-3H11A3,3,0,0,0,8,5V6H4A1,1,0,0,0,4,8H5V19a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V8h1a1,1,0,0,0,0-2ZM10,5a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1V6H10Zm7,14a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V8H17Z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

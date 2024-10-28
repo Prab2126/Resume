@@ -58,11 +58,11 @@ textinput.addEventListener("input", (e) => {
 document.addEventListener("keypress", (e) => {
   if (e.key === "Enter" && inputValue.trim() !== "") {
     creatingElement();
-    inputValue = "";
+    textinput.value = "";
   }
 });
 
 createBtn.addEventListener("click", (e) => {
   creatingElement();
-  inputValue = "";
+  textinput.value = "";
 });

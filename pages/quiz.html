@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <!-- <script src="js/Quiz.js" defer></script> -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+
+        gap: 20px;
+      }
+      :root {
+        --border-radius: 10px;
+      }
+      .progress {
+        border: 1px solid #bdbdbd;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 7px;
+        align-items: center;
+        height: 54px;
+        width: 100%;
+      }
+      .moving-par {
+        height: 100%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+      }
+      .moving-par + span {
+        display: flex;
+        gap: 5px;
+      }
+      .moving-div {
+        background: #bdbdbd;
+        width: 40%;
+        height: 100%;
+        border-radius: var(--border-radius);
+      }
+      .movingModules {
+        margin-left: 5px;
+      }
+      .qna {
+        border: 1px solid gray;
+        border-radius: var(--border-radius);
+        padding: 5px;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+      }
+      button {
+        outline: none;
+        border: none;
+      }
+      #h1Par {
+        display: flex;
+        padding: 20px 0;
+        justify-content: center;
+        align-items: center;
+        background: rgba(234, 234, 234, 0.527);
+        border-radius: var(--border-radius);
+      }
+      h1 {
+        width: 350px;
+        text-align: center;
+        font-family: monospace;
+        font-size: 36px;
+        align-self: center;
+      }
+      .toggles {
+        display: flex;
+        background: rgba(234, 234, 234, 0.527);
+
+        border-radius: var(--border-radius);
+        padding: 8px 0;
+        justify-content: space-around;
+      }
+      .toggles > * {
+        padding: 10px 15px;
+        font-weight: bold;
+        display: block;
+        cursor: pointer;
+        transition: all 0.1s ease;
+        background: none;
+        font-family: sans-serif;
+        border-radius: var(--border-radius);
+      }
+
+      .toggles > *:hover {
+        background: gray;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2>Flash Cards</h2>
+      <div class="progress">
+        <div class="moving-par">
+          <div class="moving-div"></div>
+          <p class="movingModules">0%</p>
+        </div>
+
+        <span>
+          <strong>3</strong>
+          or
+          <strong>23</strong>
+        </span>
+      </div>
+
+      <div class="qna">
+        <div id="h1Par">
+          <h1>What is the difference between var,let, and const?</h1>
+        </div>
+        <div class="toggles">
+          <button class="previous">< Previous</button>
+          <span class="showAns">Show Answer</span>
+          <button class="next">Next ></button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

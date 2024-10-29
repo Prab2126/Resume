@@ -441,7 +441,7 @@ nextBtn.addEventListener("click", (e) => {
   calculate(plus + 1);
   firstNo.innerHTML = plus + 1;
   let value = qna();
-  ansShow(plus);
+  ansShow(plus + 1);
   question.innerHTML = `<h1>${value[plus + 1]?.["question"]}</h1>`;
 });
 
@@ -451,7 +451,7 @@ previousBtn.addEventListener("click", (e) => {
   negative > 1 ? trueFun(e, true) : flaseFun(e, true);
   calculate(negative - 1, true);
   let value = qna();
-  ansShow(negative);
+  ansShow(negative - 1);
   question.innerHTML = `<h1>${value[negative - 1]?.["question"]}</h1>`;
   firstNo.innerHTML = negative - 1;
 });

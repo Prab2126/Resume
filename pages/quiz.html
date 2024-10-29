@@ -15,6 +15,7 @@
       body {
         width: 100%;
         height: 100vh;
+        padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -56,7 +57,7 @@
         background: #bdbdbd;
         height: 100%;
         width: 0%;
-        transition: all 1s ease;
+        transition: all 1s ease-in-out;
         border-radius: var(--border-radius);
       }
       .movingModules {
@@ -87,7 +88,8 @@
       }
       h1,
       .repalceh1 {
-        width: 350px;
+        width: 100%;
+
         text-align: center;
         font-family: monospace;
         font-size: 36px;
@@ -96,6 +98,9 @@
 
       .repalceh1 {
         font-size: 20px;
+        white-space: pre-line;
+        overflow-wrap: break-word;
+        width: 90%;
         text-align: justify;
       }
       .toggles {

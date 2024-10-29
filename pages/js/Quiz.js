@@ -402,7 +402,7 @@ function calculate(params = 0, boolean) {
       } else {
         clearInterval(out);
       }
-    }, 45);
+    }, 150);
   } else {
     let out = setInterval(() => {
       let adding = animation++;
@@ -411,7 +411,7 @@ function calculate(params = 0, boolean) {
       } else {
         clearInterval(out);
       }
-    }, 45);
+    }, 150);
   }
 }
 

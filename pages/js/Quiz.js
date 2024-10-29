@@ -366,7 +366,6 @@ function qna() {
   return arrayObj;
 }
 let Arraylength = qna();
-question.innerHTML = `<h1>${Arraylength[0]?.["question"]}</h1>`;
 
 totalNo.innerHTML = Arraylength.length - 1;
 

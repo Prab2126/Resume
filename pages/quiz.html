@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
-    <!-- <script src="js/Quiz.js" defer></script> -->
+    <script src="js/Quiz.js" defer></script>
     <style>
       * {
         padding: 0;
         margin: 0;
+        user-select: none;
         box-sizing: border-box;
       }
       body {
@@ -31,6 +32,7 @@
       }
       .progress {
         border: 1px solid #bdbdbd;
+        gap: 10px;
         border-radius: 20px;
         display: flex;
         justify-content: space-between;
@@ -42,6 +44,7 @@
       .moving-par {
         height: 100%;
         display: flex;
+
         width: 100%;
         align-items: center;
       }
@@ -51,8 +54,9 @@
       }
       .moving-div {
         background: #bdbdbd;
-        width: 40%;
         height: 100%;
+        width: 0%;
+        transition: all 1s ease;
         border-radius: var(--border-radius);
       }
       .movingModules {
@@ -77,13 +81,22 @@
         align-items: center;
         background: rgba(234, 234, 234, 0.527);
         border-radius: var(--border-radius);
+        transition: all 1s ease;
+        min-height: 187px;
+        max-height: 318px;
       }
-      h1 {
+      h1,
+      .repalceh1 {
         width: 350px;
         text-align: center;
         font-family: monospace;
         font-size: 36px;
         align-self: center;
+      }
+
+      .repalceh1 {
+        font-size: 20px;
+        text-align: justify;
       }
       .toggles {
         display: flex;
@@ -108,6 +121,12 @@
         background: gray;
         color: white;
       }
+      .toggles > *:first-child {
+        cursor: not-allowed;
+      }
+      #h1Par * {
+        user-select: text !important;
+      }
     </style>
   </head>
   <body>
@@ -120,18 +139,18 @@
         </div>
 
         <span>
-          <strong>3</strong>
+          <strong id="firstNo">0</strong>
           or
-          <strong>23</strong>
+          <strong></strong>
         </span>
       </div>
 
       <div class="qna">
         <div id="h1Par">
-          <h1>What is the difference between var,let, and const?</h1>
+          <h1></h1>
         </div>
         <div class="toggles">
-          <button class="previous">< Previous</button>
+          <button class="previous" disabled>< Previous</button>
           <span class="showAns">Show Answer</span>
           <button class="next">Next ></button>
         </div>
